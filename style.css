@@ -6,7 +6,7 @@ body {
 }
 
 svg  {
-    background-color: lightcoral;
+    background-color: lightyellow;
     width: min(70vh, 100vw);
     height: min(70vh, 100vw);
 }
