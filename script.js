@@ -13,7 +13,8 @@ function handleKeyPress(ev) {
 
 function gameLoop() {
     const player = document.querySelector("#player");
-    player.setAttribute("cy", 100 * Math.random());
+    let posY = parseInt(player.getAttribute("cy"));
+    player.setAttribute("cy", posY + 1);
 
     // Loop forever
     window.requestAnimationFrame(gameLoop);
