@@ -9,9 +9,17 @@ function handleKeyPress(ev) {
     }   else if (ev.key === "g") {
             player.setAttribute("fill", "yellow")
     }
+}
 
+function gameLoop() {
+    const player = document.querySelector("#player");
+    player.setAttribute("cy", 100 * Math.random());
+
+    // Loop forever
+    window.requestAnimationFrame(gameLoop);
 }
 
 
+gameLoop()
 
 window.onkeydown = handleKeyPress;
