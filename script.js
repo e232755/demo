@@ -1,3 +1,6 @@
+let dy = 0
+
+
 function handleKeyPress(ev) {
     const player = document.querySelector("#player");
     console.log(ev)
@@ -12,9 +15,12 @@ function handleKeyPress(ev) {
 }
 
 function gameLoop() {
+    // Update game state
+    dy = Math.min(dy + 0.05, 1)
+    
     const player = document.querySelector("#player");
-    let posY = parseInt(player.getAttribute("cy"));
-    player.setAttribute("cy", posY + 1);
+    let posY = parseFloat(player.getAttribute("cy"));
+    player.setAttribute("cy", posY + dy);
 
     // Loop forever
     window.requestAnimationFrame(gameLoop);
